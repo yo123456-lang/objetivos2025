@@ -1,0 +1,176 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tipografía global */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background-color: #0077b6;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    color: #90e0ef;
+}
+
+/* Botón Menú (versión móvil) */
+.menu-toggle {
+    display: none;
+    font-size: 32px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* Banner */
+.banner {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to bottom right, #90e0ef, #caf0f8);
+}
+
+.banner-content {
+    margin-bottom: 20px;
+}
+
+.banner h1 {
+    font-size: 2.5em;
+    color: #0077b6;
+}
+
+.banner p {
+    font-size: 1.2em;
+    color: #023e8a;
+}
+
+.banner img {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+    border-radius: 12px;
+}
+
+/* Secciones */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.section-light {
+    background-color: #e0f7fa;
+}
+
+.section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #0077b6;
+}
+
+.section p, .section ul, .section ol {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    font-size: 1.1em;
+}
+
+/* Listas */
+.section ul, .section ol {
+    text-align: left;
+    padding-left: 40px;
+}
+
+.section ul li, .section ol li {
+    margin-bottom: 10px;
+}
+
+/* Carrusel de imágenes */
+.carousel-images {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.carousel-images img {
+    width: 300px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.carousel-images img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0077b6;
+    color: white;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        background-color: #0077b6;
+        position: absolute;
+        right: 20px;
+        top: 80px;
+        border-radius: 10px;
+        width: 200px;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .banner h1 {
+        font-size: 2em;
+    }
+
+    .section h2 {
+        font-size: 1.7em;
+    }
+}
